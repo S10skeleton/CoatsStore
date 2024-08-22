@@ -1,0 +1,221 @@
+:root {
+  background-color: rgb(29, 29, 29);
+  color: aliceblue;
+}
+.movie-poster {
+    width: auto; /* Poster width will be the same as the movie-item width */
+    height: 400px; /* Maintain aspect ratio */
+  }
+.movie-item {
+  margin-right: 20px; /* Space between items */
+  flex-shrink: 0;
+}
+
+
+
+/* Rest of your CSS remains the same */
+
+.movie-item h4 {
+  max-width: 250px;
+  white-space: wrap;
+  overflow: hidden;
+  
+}
+
+.movieRow {
+  padding: 30px;
+}
+.movie-list-wrapper {
+  position: relative;
+}
+
+.movie-list {
+  display: flex;
+  overflow-x: auto; /* Allows horizontal scrolling */
+  scroll-behavior: smooth;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+
+}
+
+.movie-list::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
+
+.scroll-hover-area {
+    width: 100px; /* Narrow width */
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
+  }
+
+
+  .scroll-hover-area.left {
+    left: 0;
+  }
+  
+  .scroll-hover-area.right {
+    right: 0;
+  } 
+  .add-movie-content {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to next line */
+    gap: 10px; /* Spacing between inputs */
+  }
+  
+  .add-movie-content > * {
+    flex: 1 1 45%; /* Each input field takes up equal space with a maximum width of 45% */
+  }
+  
+  .add-movie-modal input,
+  .add-movie-modal textarea {
+    width: 100%; /* Full width of each input field */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .add-movie-modal button {
+    padding: 10px;
+    background-color: #383838;
+    border-color: #7fe000;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .add-movie-modal button:hover {
+    background-color: #4CAF50;
+  }
+  
+  
+
+/* Styling for the buttons */
+.home-top-buttons {
+  display: flex; /* Set the container to use Flexbox */
+  justify-content: space-around; /* Space out the buttons evenly */
+  align-items: center; /* Align items vertically */
+  margin-top: 20px; /* Spacing at the top */
+  padding: 0 10px; /* Padding on the sides */
+}
+
+.home-button {
+  padding: 10px 20px;
+  background-color: #181818; /* Dark background */
+  color: aliceblue;
+  border-radius: 5px;
+  border: 2px solid #8ae000; /* Adjusted for border color */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  font-size: 16px; /* Adjust size as needed */
+}
+
+.home-button:hover {
+  background-color: #367c39; /* Darker shade of green on hover */
+  transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+
+  /* Add any additional styling as necessary */
+  
+  
+/* Media query for tablets and smaller screens */
+@media (max-width: 1268px) {
+  .movie-poster {
+    height: 300px; /* Adjust height for smaller screens */
+  }
+
+  .movie-item h4 {
+    max-width: 200px; /* Adjust width for smaller screens */
+  }
+  .scroll-hover-area {
+    display: none; /* Hide hover areas on touch devices */
+  }
+
+  .movie-list {
+    overflow-x: scroll; /* Enable scrolling for touch devices */
+  }
+}
+
+/* Ensure scrollbars are hidden in WebKit browsers */
+.movie-list::-webkit-scrollbar {
+  display: none;
+}
+
+  /* Adjust .movie-list-wrapper, .movie-list, and other styles as needed */
+
+
+/* Media query for phones */
+@media (max-width: 480px) {
+  .movie-poster {
+    height: 200px; /* Further adjust height for phone screens */
+  }
+  .movieRow {
+    padding: 5px;
+  }
+
+  .movie-item h4 {
+    max-width: 150px; /* Further adjust width for phone screens */
+  }
+
+  .scroll-hover-area {
+    display: none; /* Hide hover areas on touch devices */
+  }
+
+  .movie-list {
+    overflow-x: scroll; /* Enable scrolling for touch devices */
+  }
+}
+
+/* Ensure scrollbars are hidden in WebKit browsers */
+/* Styles.css */
+
+.add-movie-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(26, 26, 26);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(99, 99, 99, 0.5);
+  z-index: 100;
+  text-align: center;
+  max-width: 400px; /* Set a max width */
+}
+
+.add-movie-modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between form elements */
+}
+
+.add-movie-modal input,
+.add-movie-modal textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.add-movie-modal button {
+  background-color: rgb(56, 56, 56);
+  border-color: rgb(102, 156, 0);
+  color: aliceblue;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-movie-content {
+  padding: 20px;
+}
+
+/* Styles for .movie-item and .movie-poster */

@@ -1,0 +1,95 @@
+.details {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    /* gap: 5%; */
+    padding: 20px;
+  }
+  
+  .movie-posterD {
+    flex: 1; /* Allows the poster to flex */
+    max-width: 800px; /* Limit max width of poster */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px;
+  }
+
+  
+  .movie-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Allows movie info to flex */
+    max-width: 30%; 
+    margin: 8%;
+    margin-top: 10%;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional background color for visibility */
+    border-radius: 10px; /* Optional styling */
+  }
+ 
+  .movie-trailer video {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+}
+  
+  .playBtn button {
+    margin: 20px;
+    background-color: rgb(56, 56, 56);
+    border-color: rgb(102, 156, 0);
+    color: aliceblue;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  .movie-info p {
+    max-width: 400px;
+    word-wrap: break-word;
+  }
+
+  .title {
+    font-size: 4em; /* Adjust the size as needed */
+    font-weight: bold; /* For a heavier font */
+    color: #fff; /* Example color, change as needed */
+    margin: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #07070731; /* Dark background */
+  color: aliceblue;
+  border-radius: 5px;
+  border: 2px solid #8ae000; /* Adjusted for border color */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  font-size: 16px; /* Adjust size as needed */
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 768px) {
+    .details {
+      flex-direction: column; /* Stack the elements vertically */
+      align-items: center; /* Center align the stacked items */
+      gap: 20px; /* Adjust gap for mobile */
+    }
+  
+    .movie-posterD {
+      max-width: 100%; /* Full width of the container */
+    }
+  
+    .movie-info {
+      max-width: 90%; /* Adjust max width for mobile */
+      margin: 20px 0; /* Adjust margin for mobile */
+    }
+  
+    .title {
+      font-size: 2.5em; /* Adjust font size for mobile */
+    }
+  }
+  
+  /* Further adjustments for smaller screens (phones) */
+  @media (max-width: 480px) {
+    .title {
+      font-size: 2em; /* Further reduce font size for phones */
+    }
+  }
+  
